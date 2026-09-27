@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "static-site",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["http-server", "kingshuk-guest-house-main", "-p", "4321", "-c-1"],
+      "port": 4321
+    }
+  ]
+}
