@@ -1,0 +1,12 @@
+{
+  "name": "kingsukh-guest-house-static",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tailwindcss -i ./css/input.css -o ./assets/css/styles.css --minify",
+    "watch": "tailwindcss -i ./css/input.css -o ./assets/css/styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 99%;
+    --foreground: 0 0% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+
+    --primary: 150 15% 70%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 20%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 50%;
+
+    --accent: 150 20% 95%;
+    --accent-foreground: 0 0% 25%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 92%;
+    --input: 0 0% 92%;
+    --ring: 150 15% 70%;
+
+    --radius: 0.5rem;
+
+    --soft-shadow: 0 2px 8px hsl(0 0% 0% / 0.04);
+    --hover-shadow: 0 4px 16px hsl(0 0% 0% / 0.08);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .smooth-hover {
+    @apply transition-all duration-400 ease-out;
+  }
+}
+
+/* ---- Scroll-reveal (replaces Framer Motion's useInView fade/slide-up) ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Nav entrance (replaces Framer Motion's initial y:-100 -> y:0) ---- */
+.nav-enter {
+  animation: nav-slide-down 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+@keyframes nav-slide-down {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* ---- Mobile menu open/close (replaces Framer Motion's clip-path inset) ---- */
+.mobile-menu {
+  clip-path: inset(0 0 100% 0);
+  opacity: 0;
+  transition: clip-path 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  display: none;
+}
+.mobile-menu.is-open {
+  display: block;
+}
+.mobile-menu.is-open.is-shown {
+  clip-path: inset(0 0 0% 0);
+  opacity: 1;
+}
+
+/* ---- Hero slide crossfade (replaces Framer Motion's AnimatePresence opacity fade) ---- */
+.hero-slide {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+.hero-slide.is-active {
+  opacity: 1;
+}
+
+/* ---- Hero text entrance (replaces staggered Framer Motion fade/slide-up on mount) ---- */
+.hero-fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: hero-fade-up 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+@keyframes hero-fade-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- Gallery lightbox (replaces Radix Dialog) ---- */
+.lightbox-overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+.lightbox-overlay.is-open {
+  opacity: 1;
+}
+.lightbox-content {
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+.lightbox-overlay.is-open .lightbox-content {
+  opacity: 1;
+  transform: scale(1);
+}

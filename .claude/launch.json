@@ -4,7 +4,7 @@
     {
       "name": "static-site",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["http-server", "kingshuk-guest-house-main", "-p", "4321", "-c-1"],
+      "runtimeArgs": ["http-server", ".", "-p", "4321", "-c-1"],
       "port": 4321
     }
   ]
