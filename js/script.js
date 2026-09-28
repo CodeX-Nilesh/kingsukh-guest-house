@@ -33,13 +33,14 @@
       brand.className = "text-sm font-normal tracking-wide " + (light ? "text-white" : "text-foreground");
 
       const linkCls =
-        "nav-link-desktop text-[11px] uppercase tracking-wider font-normal smooth-hover hover:opacity-60 " +
-        (light ? "text-white" : "text-foreground");
+        "relative nav-link-desktop text-[11px] uppercase tracking-wider font-normal smooth-hover hover:opacity-60 " +
+        "after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 " +
+        (light ? "text-white after:bg-white" : "text-foreground after:bg-[#74C476]");
       desktopLinks.forEach((a) => (a.className = linkCls));
 
       const btnColors = light
-        ? "bg-white/10 text-white hover:bg-primary/80 hover:text-white"
-        : "bg-white/20 text-foreground hover:bg-primary/80 hover:text-white";
+        ? "bg-white/10 text-white hover:bg-[#74C476] hover:text-foreground"
+        : "bg-white/20 text-foreground hover:bg-[#74C476] hover:text-foreground";
       const btnBase =
         "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full smooth-hover text-[11px] uppercase tracking-wider font-normal backdrop-blur-md border border-white/30 px-5";
       desktopBtn.className = btnBase + " h-9 " + btnColors;
@@ -198,6 +199,123 @@
   }
 
   /* ---------------------------------------------------------------------- */
+  /* Room detail modal: full-size photo viewer with prev/next + zoom        */
+  /* (only wired up for room cards carrying data-room-modal, e.g. Room 2)   */
+  /* ---------------------------------------------------------------------- */
+  function initRoomModal() {
+    const triggers = document.querySelectorAll("[data-room-modal]");
+    const overlay = document.getElementById("room-modal");
+    if (triggers.length === 0 || !overlay) return;
+
+    const imagesWrap = document.getElementById("room-modal-images");
+    const dotsWrap = document.getElementById("room-modal-dots");
+    const prevBtn = document.getElementById("room-modal-prev");
+    const nextBtn = document.getElementById("room-modal-next");
+    const closeBtn = document.getElementById("room-modal-close");
+    const titleEl = document.getElementById("room-modal-title");
+    const descEl = document.getElementById("room-modal-desc");
+    const priceEl = document.getElementById("room-modal-price");
+
+    let images = [];
+    let current = 0;
+    let zoomed = false;
+    let imgEls = [];
+    let dotEls = [];
+    let lastFocused = null;
+
+    function renderSlide() {
+      imgEls.forEach((img, i) => {
+        const active = i === current;
+        img.className =
+          "absolute inset-0 w-full h-full object-cover transition-all duration-300 ease-out " +
+          (active ? "opacity-100 " : "opacity-0 ") +
+          (active && zoomed ? "scale-[1.6] cursor-zoom-out" : "scale-100 cursor-zoom-in");
+      });
+      dotEls.forEach((dot, i) => {
+        dot.className = "h-2 w-2 rounded-full transition-colors duration-300 " + (i === current ? "bg-white" : "bg-white/50");
+      });
+    }
+
+    function goTo(index) {
+      current = (index + images.length) % images.length;
+      zoomed = false;
+      renderSlide();
+    }
+
+    function buildSlides() {
+      imagesWrap.innerHTML = "";
+      dotsWrap.innerHTML = "";
+      imgEls = images.map((src, i) => {
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = (titleEl.dataset.plainTitle || "Room") + " – photo " + (i + 1);
+        img.loading = "lazy";
+        img.addEventListener("click", () => {
+          zoomed = !zoomed;
+          renderSlide();
+        });
+        imagesWrap.appendChild(img);
+        return img;
+      });
+      const multi = images.length > 1;
+      prevBtn.classList.toggle("hidden", !multi);
+      nextBtn.classList.toggle("hidden", !multi);
+      dotEls = images.map((_, i) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.setAttribute("aria-label", "Go to photo " + (i + 1));
+        dot.addEventListener("click", () => goTo(i));
+        dotsWrap.appendChild(dot);
+        return dot;
+      });
+      dotsWrap.classList.toggle("hidden", !multi);
+    }
+
+    function open(trigger) {
+      images = (trigger.dataset.images || "").split("|").filter(Boolean);
+      titleEl.textContent = trigger.dataset.title || "";
+      titleEl.dataset.plainTitle = trigger.dataset.title || "";
+      descEl.textContent = trigger.dataset.desc || "";
+      priceEl.textContent = trigger.dataset.price || "";
+      current = 0;
+      zoomed = false;
+      buildSlides();
+      renderSlide();
+
+      lastFocused = document.activeElement;
+      overlay.classList.remove("hidden");
+      overlay.classList.add("flex");
+      requestAnimationFrame(() => overlay.classList.add("is-open"));
+      document.body.style.overflow = "hidden";
+      closeBtn.focus();
+    }
+
+    function close() {
+      overlay.classList.remove("is-open");
+      document.body.style.overflow = "";
+      setTimeout(() => {
+        overlay.classList.add("hidden");
+        overlay.classList.remove("flex");
+      }, 300);
+      if (lastFocused) lastFocused.focus();
+    }
+
+    triggers.forEach((trigger) => trigger.addEventListener("click", () => open(trigger)));
+    prevBtn.addEventListener("click", () => goTo(current - 1));
+    nextBtn.addEventListener("click", () => goTo(current + 1));
+    closeBtn.addEventListener("click", close);
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) close();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (!overlay.classList.contains("is-open")) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowRight") goTo(current + 1);
+      if (e.key === "ArrowLeft") goTo(current - 1);
+    });
+  }
+
+  /* ---------------------------------------------------------------------- */
   /* Contact form: build a WhatsApp message from the fields and open it     */
   /* (replaces Sections.tsx's Contact useState + FormEvent handler)         */
   /* ---------------------------------------------------------------------- */
@@ -236,6 +354,7 @@
     initHero();
     initReveal();
     initGalleryLightbox();
+    initRoomModal();
     initContactForm();
     initFooterYear();
   });

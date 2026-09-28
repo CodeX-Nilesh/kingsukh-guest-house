@@ -17,6 +17,7 @@
 
     <meta name="twitter:card" content="summary_large_image" />
 
+    <link rel="preload" as="image" href="assets/images/baranti%20(1).webp" fetchpriority="high" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
 
@@ -69,22 +70,22 @@
 
     <main>
       <!-- Hero -->
-      <section id="home" class="relative h-screen w-full overflow-hidden">
+      <section id="home" class="relative h-screen w-full overflow-hidden bg-foreground">
         <div class="hero-slides absolute inset-0">
           <div class="hero-slide absolute inset-0" data-index="0">
-            <img src="assets/images/hero-camping.jpg" alt="Kingsukh Guest House in Barhanti" class="w-full h-full object-cover" />
+            <img src="assets/images/baranti%20(1).webp" alt="Baranti Dam at sunset" fetchpriority="high" class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-black/30"></div>
           </div>
           <div class="hero-slide absolute inset-0" data-index="1">
-            <img src="assets/images/spot-forest.jpg" alt="Greenery near Baranti" class="w-full h-full object-cover" />
+            <img src="assets/images/seenary.jpg" alt="Scenic winding road through the hills near Baranti" loading="lazy" class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-black/30"></div>
           </div>
           <div class="hero-slide absolute inset-0" data-index="2">
-            <img src="assets/images/spot-lake.jpg" alt="Baranti Lake" class="w-full h-full object-cover" />
+            <img src="assets/images/palash.jpg" alt="Palash trees in bloom near Baranti" loading="lazy" class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-black/30"></div>
           </div>
           <div class="hero-slide absolute inset-0" data-index="3">
-            <img src="assets/images/spot-meadow.jpg" alt="Hills around Baranti" class="w-full h-full object-cover" />
+            <img src="assets/images/header.jpg" alt="Comfortable seating area" loading="lazy" class="w-full h-full object-cover portrait:object-[78%_50%]" />
             <div class="absolute inset-0 bg-black/30"></div>
           </div>
         </div>
@@ -103,16 +104,16 @@
           </h1>
 
           <p class="mt-4 max-w-md text-sm font-light text-white/85 hero-fade-up" style="animation-delay:0.4s">
-            A peaceful guest house near Baranti Hill and Lake, with comfortable rooms and warm, friendly service.
+            Make Yourself At Home In Our Guest House.
           </p>
           <div class="mt-6 flex flex-wrap gap-3 hero-fade-up" style="animation-delay:0.5s">
-            <a href="https://wa.me/919007062180?text=Hello%2C%20I%20would%20like%20to%20book%20a%20room%20at%20Kingsukh%20Guest%20House." target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-white text-foreground px-6 py-3 rounded-full text-sm tracking-wide hover:bg-white/90 transition-colors">
+            <a href="https://wa.me/919007062180?text=Hello%2C%20I%20would%20like%20to%20book%20a%20room%20at%20Kingsukh%20Guest%20House." target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-white text-foreground px-6 py-3 rounded-full text-sm tracking-wide hover:bg-[#74C476] transition-colors duration-400">
               Book on WhatsApp
               <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
               </svg>
             </a>
-            <a href="#rooms" class="flex items-center px-6 py-3 rounded-full text-sm tracking-wide border border-white/60 text-white hover:bg-white/10 transition-colors">
+            <a href="#rooms" class="flex items-center px-6 py-3 rounded-full text-sm tracking-wide border border-white/60 text-white hover:bg-[#74C476]/20 hover:border-[#74C476] transition-colors duration-400">
               View Rooms
             </a>
           </div>
@@ -136,23 +137,28 @@
 
       <!-- About -->
       <section id="about" class="py-24 lg:py-32 scroll-mt-20">
-        <div class="container mx-auto px-6 lg:px-12 max-w-4xl">
-          <div class="reveal text-center mb-14 lg:mb-20">
-            <span class="text-[11px] uppercase tracking-wider text-muted-foreground mb-4 block">About Us</span>
-            <h2 class="text-2xl md:text-3xl font-light mb-4 text-foreground tracking-tight">A quiet stay in Barhanti</h2>
-            <p class="text-sm text-muted-foreground max-w-xl mx-auto font-light leading-relaxed">Kingsukh Guest House is a peaceful place to stay in Manpur, Barhanti, close to Baranti Hill and Lake. We offer clean, comfortable rooms and friendly service, so you can rest well and enjoy the hills, lakes and open skies of this part of West Bengal.</p>
+        <div class="container mx-auto px-6 lg:px-12">
+          <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-5xl mx-auto mb-14 lg:mb-20">
+            <div class="reveal rounded-2xl overflow-hidden shadow-soft aspect-[3/4]">
+              <img src="assets/images/about%20us.jpg" alt="Kingsukh Guest House building and entrance gate, Manpur, Barhanti" loading="lazy" class="w-full h-full object-cover" />
+            </div>
+            <div class="reveal">
+              <h1 class="text-[11px] uppercase tracking-wider text-muted-foreground mb-4 block">About Us</h1>
+              <h2 class="text-2xl md:text-3xl font-light mb-4 text-foreground tracking-tight">"There is no hospitality like understanding."</h2>
+              <p class="text-sm text-muted-foreground font-light leading-relaxed">Embark on a tranquil journey at our Kingsukh Guest House, enveloped by the scenic allure of Biharinath Hill, Baranti Hill, Susunia Hill, Joychandi Hill, Garhpanchkot, Baranti Dam, Maithon Dam, and the captivating Panchat Dam. Revel in the embrace of comfort, relish delightful meals, and unwind in our verdant garden oasis. Your ideal retreat beckons, promising a harmonious blend of nature's beauty and heartfelt hospitality. Explore the hidden gems of Purulia, creating memories that linger long after your stay.</p>
+            </div>
           </div>
           <div class="reveal">
             <p class="text-center text-sm text-muted-foreground font-light mb-6">Nearby places to explore</p>
             <ul class="flex flex-wrap justify-center gap-3">
-              <li class="px-4 py-2 rounded-full border border-border text-xs tracking-wide text-foreground">Biharinath Hill</li>
-              <li class="px-4 py-2 rounded-full border border-border text-xs tracking-wide text-foreground">Baranti Hill</li>
-              <li class="px-4 py-2 rounded-full border border-border text-xs tracking-wide text-foreground">Susunia Hill</li>
-              <li class="px-4 py-2 rounded-full border border-border text-xs tracking-wide text-foreground">Joychandi Hill</li>
-              <li class="px-4 py-2 rounded-full border border-border text-xs tracking-wide text-foreground">Garhpanchkot</li>
-              <li class="px-4 py-2 rounded-full border border-border text-xs tracking-wide text-foreground">Baranti Dam</li>
-              <li class="px-4 py-2 rounded-full border border-border text-xs tracking-wide text-foreground">Maithon Dam</li>
-              <li class="px-4 py-2 rounded-full border border-border text-xs tracking-wide text-foreground">Panchet Dam</li>
+              <li class="px-4 py-2 rounded-full border border-border text-xs tracking-wide text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-soft">Biharinath Hill</li>
+              <li class="px-4 py-2 rounded-full border border-border text-xs tracking-wide text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-soft">Baranti Hill</li>
+              <li class="px-4 py-2 rounded-full border border-border text-xs tracking-wide text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-soft">Susunia Hill</li>
+              <li class="px-4 py-2 rounded-full border border-border text-xs tracking-wide text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-soft">Joychandi Hill</li>
+              <li class="px-4 py-2 rounded-full border border-border text-xs tracking-wide text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-soft">Garhpanchkot</li>
+              <li class="px-4 py-2 rounded-full border border-border text-xs tracking-wide text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-soft">Baranti Dam</li>
+              <li class="px-4 py-2 rounded-full border border-border text-xs tracking-wide text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-soft">Maithon Dam</li>
+              <li class="px-4 py-2 rounded-full border border-border text-xs tracking-wide text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-soft">Panchet Dam</li>
             </ul>
           </div>
         </div>
@@ -168,29 +174,63 @@
           <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div class="reveal bg-card rounded-2xl overflow-hidden shadow-soft flex flex-col">
               <div class="aspect-[4/3] overflow-hidden">
-                <img src="assets/images/detail-forest-1.jpg" alt="Cozy Haven Room at Kingsukh Guest House, Baranti" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                <img src="assets/images/room1.jpg" alt="Cozy Haven Room at Kingsukh Guest House, Baranti" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
               </div>
               <div class="p-6 lg:p-8 flex flex-col flex-1">
                 <h3 class="text-xl font-light text-foreground mb-2">Cozy Haven Room</h3>
                 <p class="text-sm text-muted-foreground font-light mb-6 flex-1">A comfortable, intimate room for a peaceful stay.</p>
                 <div class="flex flex-wrap items-center justify-between gap-4">
                   <p class="text-sm text-foreground">Starting from <span class="text-lg">₹1,000</span><span class="text-muted-foreground">/night</span></p>
-                  <a href="https://wa.me/919007062180?text=Hello%2C%20I%20would%20like%20to%20book%20the%20Cozy%20Haven%20Room%20at%20Kingsukh%20Guest%20House." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full text-sm tracking-wide hover:bg-primary/90 transition-colors">Book on WhatsApp</a>
+                  <a href="https://wa.me/919007062180?text=Hello%2C%20I%20would%20like%20to%20book%20the%20Cozy%20Haven%20Room%20at%20Kingsukh%20Guest%20House." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full text-sm tracking-wide hover:bg-[#74C476] hover:text-foreground transition-colors duration-400">Book on WhatsApp</a>
                 </div>
               </div>
             </div>
             <div class="reveal bg-card rounded-2xl overflow-hidden shadow-soft flex flex-col">
-              <div class="aspect-[4/3] overflow-hidden">
-                <img src="assets/images/detail-lake-1.jpg" alt="Spacious Serenity Suite at Kingsukh Guest House, Baranti" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-              </div>
+              <button type="button" data-room-modal data-images="assets/images/room2.jpg|assets/images/room2.1.jpg" data-title="Spacious Serenity Suite" data-desc="A larger room with more space and a relaxed atmosphere." data-price="Starting from ₹1,500/night" aria-label="View all photos of Spacious Serenity Suite" class="block w-full text-left aspect-[4/3] overflow-hidden cursor-pointer">
+                <img src="assets/images/room2.jpg" alt="Spacious Serenity Suite at Kingsukh Guest House, Baranti" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              </button>
               <div class="p-6 lg:p-8 flex flex-col flex-1">
                 <h3 class="text-xl font-light text-foreground mb-2">Spacious Serenity Suite</h3>
                 <p class="text-sm text-muted-foreground font-light mb-6 flex-1">A larger room with more space and a relaxed atmosphere.</p>
                 <div class="flex flex-wrap items-center justify-between gap-4">
                   <p class="text-sm text-foreground">Starting from <span class="text-lg">₹1,500</span><span class="text-muted-foreground">/night</span></p>
-                  <a href="https://wa.me/919007062180?text=Hello%2C%20I%20would%20like%20to%20book%20the%20Spacious%20Serenity%20Suite%20at%20Kingsukh%20Guest%20House." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full text-sm tracking-wide hover:bg-primary/90 transition-colors">Book on WhatsApp</a>
+                  <a href="https://wa.me/919007062180?text=Hello%2C%20I%20would%20like%20to%20book%20the%20Spacious%20Serenity%20Suite%20at%20Kingsukh%20Guest%20House." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full text-sm tracking-wide hover:bg-[#74C476] hover:text-foreground transition-colors duration-400">Book on WhatsApp</a>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="room-modal" class="lightbox-overlay fixed inset-0 z-[200] hidden items-center justify-center bg-black/80 p-4" role="dialog" aria-modal="true" aria-label="Room details">
+          <div class="lightbox-content relative bg-card rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-lg">
+            <button id="room-modal-close" type="button" aria-label="Close" class="absolute right-4 top-4 z-20 rounded-sm bg-card/90 p-1.5 opacity-80 hover:opacity-100 transition-opacity">
+              <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6 6 18" /><path d="m6 6 12 12" />
+              </svg>
+              <span class="sr-only">Close</span>
+            </button>
+
+            <div class="relative aspect-[4/3] bg-foreground overflow-hidden">
+              <div id="room-modal-images" class="absolute inset-0"></div>
+
+              <button id="room-modal-prev" type="button" aria-label="Previous photo" class="absolute left-2 top-1/2 -translate-y-1/2 z-10 rounded-full bg-black/40 hover:bg-black/60 text-white p-2 transition-colors duration-300">
+                <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m15 18-6-6 6-6" />
+                </svg>
+              </button>
+              <button id="room-modal-next" type="button" aria-label="Next photo" class="absolute right-2 top-1/2 -translate-y-1/2 z-10 rounded-full bg-black/40 hover:bg-black/60 text-white p-2 transition-colors duration-300">
+                <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+
+              <div id="room-modal-dots" class="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 flex gap-2"></div>
+            </div>
+
+            <div class="p-6 lg:p-8">
+              <h3 id="room-modal-title" class="text-xl font-light text-foreground mb-2"></h3>
+              <p id="room-modal-desc" class="text-sm text-muted-foreground font-light mb-4"></p>
+              <p id="room-modal-price" class="text-sm text-foreground"></p>
             </div>
           </div>
         </div>
@@ -200,37 +240,42 @@
       <section id="amenities" class="py-24 lg:py-32 scroll-mt-20">
         <div class="container mx-auto px-6 lg:px-12">
           <div class="reveal text-center mb-14 lg:mb-20">
-            <span class="text-[11px] uppercase tracking-wider text-muted-foreground mb-4 block">Amenities</span>
+            <span class="text-[11px] uppercase tracking-wider text-muted-foreground mb-4 block">Services</span>
             <h2 class="text-2xl md:text-3xl font-light mb-4 text-foreground tracking-tight">Services for your stay</h2>
           </div>
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            <div class="reveal text-center p-6 rounded-2xl border border-border">
-              <svg class="w-7 h-7 mx-auto mb-4 text-primary stroke-[1.5]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
-                <path d="m9 12 2 2 4-4" />
-              </svg>
-              <p class="text-sm text-foreground font-light">High Class Security</p>
+          <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-5xl mx-auto">
+            <div class="reveal rounded-2xl overflow-hidden shadow-soft aspect-[3/2]">
+              <img src="assets/images/service.jpg" alt="Guest services at Kingsukh Guest House" loading="lazy" class="w-full h-full object-cover" />
             </div>
-            <div class="reveal text-center p-6 rounded-2xl border border-border">
-              <svg class="w-7 h-7 mx-auto mb-4 text-primary stroke-[1.5]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" />
-              </svg>
-              <p class="text-sm text-foreground font-light">24 Hours Room Service</p>
-            </div>
-            <div class="reveal text-center p-6 rounded-2xl border border-border">
-              <svg class="w-7 h-7 mx-auto mb-4 text-primary stroke-[1.5]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8" />
-                <path d="M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7" />
-                <path d="m2.1 21.8 6.4-6.3" /><path d="m19 5-7 7" />
-              </svg>
-              <p class="text-sm text-foreground font-light">Restaurant</p>
-            </div>
-            <div class="reveal text-center p-6 rounded-2xl border border-border">
-              <svg class="w-7 h-7 mx-auto mb-4 text-primary stroke-[1.5]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" />
-              </svg>
-              <p class="text-sm text-foreground font-light">Tourist Guide Support</p>
+            <div class="reveal grid grid-cols-2 gap-6">
+              <div class="text-center p-6 rounded-2xl border border-border">
+                <svg class="w-7 h-7 mx-auto mb-4 text-primary stroke-[1.5]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+                <p class="text-sm text-foreground font-light">High Class Security</p>
+              </div>
+              <div class="text-center p-6 rounded-2xl border border-border">
+                <svg class="w-7 h-7 mx-auto mb-4 text-primary stroke-[1.5]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" />
+                </svg>
+                <p class="text-sm text-foreground font-light">24 Hours Room Service</p>
+              </div>
+              <div class="text-center p-6 rounded-2xl border border-border">
+                <svg class="w-7 h-7 mx-auto mb-4 text-primary stroke-[1.5]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8" />
+                  <path d="M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7" />
+                  <path d="m2.1 21.8 6.4-6.3" /><path d="m19 5-7 7" />
+                </svg>
+                <p class="text-sm text-foreground font-light">Restaurant</p>
+              </div>
+              <div class="text-center p-6 rounded-2xl border border-border">
+                <svg class="w-7 h-7 mx-auto mb-4 text-primary stroke-[1.5]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" />
+                </svg>
+                <p class="text-sm text-foreground font-light">Tourist Guide Support</p>
+              </div>
             </div>
           </div>
         </div>
@@ -245,22 +290,31 @@
           </div>
           <div class="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 -mx-6 px-6">
             <button class="gallery-item snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-[30vw] aspect-[4/3] rounded-2xl overflow-hidden" data-title="Kingsukh Guest House">
-              <img src="assets/images/hero-camping.jpg" alt="Kingsukh Guest House – Kingsukh Guest House, Baranti" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <img src="assets/images/about%20us.jpg" alt="Kingsukh Guest House – building and entrance gate" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </button>
-            <button class="gallery-item snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-[30vw] aspect-[4/3] rounded-2xl overflow-hidden" data-title="Surroundings">
-              <img src="assets/images/spot-forest.jpg" alt="Surroundings – Kingsukh Guest House, Baranti" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            <button class="gallery-item snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-[30vw] aspect-[4/3] rounded-2xl overflow-hidden" data-title="Reception & Common Area">
+              <img src="assets/images/recep.jpg" alt="Reception and common area – Kingsukh Guest House" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </button>
-            <button class="gallery-item snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-[30vw] aspect-[4/3] rounded-2xl overflow-hidden" data-title="Nearby lake">
-              <img src="assets/images/spot-lake.jpg" alt="Nearby lake – Kingsukh Guest House, Baranti" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            <button class="gallery-item snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-[30vw] aspect-[4/3] rounded-2xl overflow-hidden" data-title="Palash Blooms from the Rooftop">
+              <img src="assets/images/flower.png" alt="Palash trees in bloom, view from the guest house rooftop" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </button>
-            <button class="gallery-item snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-[30vw] aspect-[4/3] rounded-2xl overflow-hidden" data-title="Open landscape">
-              <img src="assets/images/spot-meadow.jpg" alt="Open landscape – Kingsukh Guest House, Baranti" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            <button class="gallery-item snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-[30vw] aspect-[4/3] rounded-2xl overflow-hidden" data-title="Baranti Dam at Sunset">
+              <img src="assets/images/baranti%20(1).webp" alt="Baranti Dam at sunset" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </button>
-            <button class="gallery-item snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-[30vw] aspect-[4/3] rounded-2xl overflow-hidden" data-title="Around the property">
-              <img src="assets/images/detail-meadow-1.jpg" alt="Around the property – Kingsukh Guest House, Baranti" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            <button class="gallery-item snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-[30vw] aspect-[4/3] rounded-2xl overflow-hidden" data-title="Scenic Hill Road">
+              <img src="assets/images/seenary.jpg" alt="Scenic winding road through the hills near Baranti" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </button>
-            <button class="gallery-item snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-[30vw] aspect-[4/3] rounded-2xl overflow-hidden" data-title="Baranti views">
-              <img src="assets/images/detail-lake-2.jpg" alt="Baranti views – Kingsukh Guest House, Baranti" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            <button class="gallery-item snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-[30vw] aspect-[4/3] rounded-2xl overflow-hidden" data-title="Palash Trees in Bloom">
+              <img src="assets/images/palash.jpg" alt="Palash trees in bloom near Baranti" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            </button>
+            <button class="gallery-item snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-[30vw] aspect-[4/3] rounded-2xl overflow-hidden" data-title="Ayodhya Hills">
+              <img src="assets/images/ayodhya.webp" alt="Ayodhya Hills, Purulia" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            </button>
+            <button class="gallery-item snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-[30vw] aspect-[4/3] rounded-2xl overflow-hidden" data-title="Maithon Dam">
+              <img src="assets/images/mithon%20dam.jpg" alt="Maithon Dam" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            </button>
+            <button class="gallery-item snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-[30vw] aspect-[4/3] rounded-2xl overflow-hidden" data-title="Comfort & Relaxation">
+              <img src="assets/images/header.jpg" alt="Comfortable seating area" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </button>
           </div>
         </div>
@@ -296,7 +350,7 @@
                 </svg>
                 <p class="text-sm text-foreground font-light leading-relaxed">Beside Barshal Water Tank, Manpur, Barhanti, West Bengal 723156</p>
               </div>
-              <a href="https://www.google.com/maps/dir/?api=1&destination=Kingsukh%20Guest%20House%2C%20Beside%20Barshal%20Water%20Tank%2C%20Manpur%2C%20Barhanti%2C%20West%20Bengal%20723156" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full text-sm tracking-wide hover:bg-primary/90 transition-colors">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Kingsukh%20Guest%20House%2C%20Beside%20Barshal%20Water%20Tank%2C%20Manpur%2C%20Barhanti%2C%20West%20Bengal%20723156" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full text-sm tracking-wide hover:bg-[#74C476] hover:text-foreground transition-colors duration-400">
                 <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <polygon points="3 11 22 2 13 21 11 13 3 11" />
                 </svg>
@@ -348,7 +402,7 @@
                 <input type="email" placeholder="Email" name="email" class="w-full bg-transparent border border-border rounded-lg px-4 py-3 text-sm font-light focus:outline-none focus:border-primary" maxlength="120" />
                 <input required type="tel" placeholder="Mobile Number" name="mobile" class="w-full bg-transparent border border-border rounded-lg px-4 py-3 text-sm font-light focus:outline-none focus:border-primary" maxlength="20" />
                 <textarea required placeholder="Message" name="message" rows="5" class="w-full bg-transparent border border-border rounded-lg px-4 py-3 text-sm font-light focus:outline-none focus:border-primary sm:col-span-2" maxlength="1000"></textarea>
-                <button type="submit" class="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full text-sm tracking-wide hover:bg-primary/90 transition-colors sm:col-span-2 sm:justify-self-start">Send on WhatsApp</button>
+                <button type="submit" class="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full text-sm tracking-wide hover:bg-[#74C476] hover:text-foreground transition-colors duration-400 sm:col-span-2 sm:justify-self-start">Send on WhatsApp</button>
               </form>
             </div>
           </div>
@@ -359,7 +413,7 @@
     <!-- Footer -->
     <footer class="bg-foreground text-background py-20 lg:py-24">
       <div class="container mx-auto px-6 lg:px-12">
-        <div class="grid gap-10 lg:grid-cols-3 lg:gap-12">
+        <div class="grid gap-10 lg:grid-cols-4 lg:gap-10">
           <div>
             <div class="flex items-center gap-2 mb-4">
               <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -369,19 +423,27 @@
               <span class="text-sm font-normal tracking-wide">Kingsukh Guest House</span>
             </div>
             <p class="text-background/70 text-xs font-light leading-relaxed max-w-xs mb-6">A peaceful guest house in Barhanti, near Baranti Hill and Lake. Clean rooms, warm service and a quiet place to rest.</p>
-            <a href="https://wa.me/919007062180?text=Hello%2C%20I%20would%20like%20to%20book%20a%20room%20at%20Kingsukh%20Guest%20House." target="_blank" rel="noopener noreferrer" class="inline-block bg-background text-foreground px-5 py-2.5 rounded-full text-xs tracking-wide hover:bg-background/90 transition-colors">Book on WhatsApp</a>
+            <a href="https://wa.me/919007062180?text=Hello%2C%20I%20would%20like%20to%20book%20a%20room%20at%20Kingsukh%20Guest%20House." target="_blank" rel="noopener noreferrer" class="inline-block bg-background text-foreground px-5 py-2.5 rounded-full text-xs tracking-wide hover:bg-[#74C476] transition-colors duration-400">Book on WhatsApp</a>
           </div>
 
           <div>
-            <h4 class="text-sm font-medium mb-4">Pages</h4>
-            <ul class="grid grid-cols-2 gap-x-8 gap-y-3">
-              <li><a href="#home" class="text-background/70 hover:text-background smooth-hover text-xs font-light">Home</a></li>
-              <li><a href="#about" class="text-background/70 hover:text-background smooth-hover text-xs font-light">About</a></li>
-              <li><a href="#rooms" class="text-background/70 hover:text-background smooth-hover text-xs font-light">Rooms</a></li>
-              <li><a href="#amenities" class="text-background/70 hover:text-background smooth-hover text-xs font-light">Amenities</a></li>
-              <li><a href="#gallery" class="text-background/70 hover:text-background smooth-hover text-xs font-light">Gallery</a></li>
-              <li><a href="#location" class="text-background/70 hover:text-background smooth-hover text-xs font-light">Location</a></li>
-              <li><a href="#contact" class="text-background/70 hover:text-background smooth-hover text-xs font-light">Contact</a></li>
+            <h4 class="text-sm font-medium mb-4">Quick Links</h4>
+            <ul class="space-y-3">
+              <li><a href="#home" class="text-background/70 hover:text-background smooth-hover text-xs font-light">Browse Destinations</a></li>
+              <li><a href="#home" class="text-background/70 hover:text-background smooth-hover text-xs font-light">Special Offers &amp; Packages</a></li>
+              <li><a href="#home" class="text-background/70 hover:text-background smooth-hover text-xs font-light">Room Types &amp; Amenities</a></li>
+              <li><a href="#home" class="text-background/70 hover:text-background smooth-hover text-xs font-light">Customer Reviews &amp; Ratings</a></li>
+              <li><a href="#home" class="text-background/70 hover:text-background smooth-hover text-xs font-light">Travel Tips &amp; Guides</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-sm font-medium mb-4">Our Services</h4>
+            <ul class="space-y-3">
+              <li><a href="#home" class="text-background/70 hover:text-background smooth-hover text-xs font-light">Concierge Assistance</a></li>
+              <li><a href="#home" class="text-background/70 hover:text-background smooth-hover text-xs font-light">Flexible Booking Options</a></li>
+              <li><a href="#home" class="text-background/70 hover:text-background smooth-hover text-xs font-light">Airport Transfers</a></li>
+              <li><a href="#home" class="text-background/70 hover:text-background smooth-hover text-xs font-light">Wellness &amp; Recreation</a></li>
             </ul>
           </div>
 
