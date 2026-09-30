@@ -32,5 +32,5 @@ Then open `index.html` directly in a browser, or serve the folder with any stati
 ```sh
 npm run build   # writes a minified assets/css/styles.css
 ```
+.
 
-Deploy `index.html`, `assets/`, and `js/` — nothing else is required at runtime.
